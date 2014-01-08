@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="media-per-column" content="42" />
+    <meta name="columns-per-page" content="1" />
+    <title>$fullName</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" type="text/css"  />
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="details_outer">
+      <div id="details_inner">
+        <div id="details_top">
+          <div id="rating"></div>
+          <div id="title"></div>
+          <div id="creator"></div>
+        </div>
+        <div id="description"></div>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="collection_info_section">
+        <div id="collection_info">
+          <div id="user_name">$fullName</div>
+          <div id="stats">
+	          <div id="total">Gesamt: $totalItems</div>
+    	      <div id="updated">Letztes Update: $publishDate</div>
+	        </div>
+        </div>
+        <div id="sidebar">
+          $shelfNavigationPopup
+          <div class="crumbs">
+            $pageNavigation
+          </div>
+        </div>  <!-- End sidebar -->
+      </div>
+      <div id="content">
+        <div id="collection">
+          <div id="media">
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="medium">
+                      <div class="title">$title</div>
+                      $coverImage185
+                      <div class="hidden">
+                        <span class="creator">$creatorsCompositeString</span>
+                        <span class="rating">$rating</span>
+                        <span class="description">$primaryDescriptionString</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div> <!-- End media -->
+        </div> <!-- End collection -->
+
+        <div style="clear: both;"></div>
+      </div> <!-- End content -->
+
+      <div id="footer">
+        <a class="monster" href="http://www.delicious-monster.com" target="_blank">
+          <img src="images/monster-small.png" alt="" /> Made with Delicious Library
+        </a>
+        <div class="crumbs">
+          $pageNavigation
+        </div>
+      </div> <!-- End footer -->
+
+    </div> <!-- End container -->
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/library.js"></script>
+  </body>
+</html>

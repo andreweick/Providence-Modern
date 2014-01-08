@@ -1,0 +1,318 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-weight: normal;
+    font-size: 80%;
+    line-height: 1.5em;
+    background-color: #000;
+    background-image: url(images/dark_exa.png) repeat;
+    text-align: center;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    border: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#container {
+    position: relative;
+    margin: 0 auto;
+    width: 765px;
+    background: url(images/wood_pattern.png);
+    z-index: 1;
+    padding: 15px 0;
+    display: inline-block;
+}
+
+/* @group Collection Info */
+
+#collection_info_section {
+    width: 100%;
+    height: 100px;
+}
+
+#collection_info_section > #librarybanner {
+    float: left;
+    margin: 14px 0 0 36px;
+    opacity: 0.95;
+}
+
+#collection_info_section > #collection_info {
+    position: relative;
+    padding: 15px;
+    width: 702px;
+    height: 80px;
+    color: #eee;
+    background: rgba(30,0,0,.5);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border-radius: 5px;
+    border-bottom: 1px solid #fff6ef;
+    float: left;
+    margin: 10px 0 0 32px;
+    -webkit-box-shadow: inset 0px 10px 10px 1px rgba(30, 0, 0, .5);
+    box-shadow: inset 0px 10px 10px 1px rgba(30, 0, 0, .5);
+}
+
+#collection_info_section > #collection_info > #user_name {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: black 0px 1px 1px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+}
+
+#collection_info_section > #collection_info #stats {
+    float: right;
+    text-align: right;
+    text-shadow: black 0px 1px 1px;
+    font-size: 1.2em;
+    margin-top: .3em;
+}
+
+/* @end */
+
+#wrap {
+    position: relative;
+    min-height: 100%;
+}
+
+#content {
+    position: relative;
+    width: 702px;
+    margin-left: 32px;
+    float: left;
+}
+
+/* @group Sidebar */
+
+#sidebar {
+    width: 100%;
+    height: 42px;
+    position: relative;
+    float: left;
+}
+
+.shelf_selection {
+    margin: 10px 32px;
+    width: 200px;
+    float: left;
+    font-size: 1.25em;
+}
+
+.crumbs {
+    position: relative;
+    float: right;
+    margin: 0 32px;
+    color: #300d00;
+    text-shadow: 0 1px 1px rgba(255, 124, 61, 0.5);
+    text-align: center;
+    padding-right: .5em;
+}
+
+.pages {
+    font-size: 1.5em;
+    height: 42px;
+    display: inline-block;
+    line-height: 42px;
+}
+
+.arrow.left:before {
+    position: absolute;
+    top: 1.1em;
+    left: -.25em;
+    display: block;
+    height: 0;
+    width: 0;
+    border-top: .5em solid transparent;
+    border-right: .5em solid #300d00;
+    border-bottom: .5em solid transparent;
+    content: "";
+}
+
+.arrow.right:before {
+    position: absolute;
+    top: 1.1em;
+    right: 0;
+    display: block;
+    height: 0;
+    width: 0;
+    border-top: .5em solid transparent;
+    border-left: .5em solid #300d00;
+    border-bottom: .5em solid transparent;
+    content: "";
+}
+
+span.arrow { display: none; }
+span.page { font-weight: bold; }
+
+
+/* @end */
+
+/* @group Collection */
+
+#collection {
+    position: relative;
+    float: right;
+    width: 100%;
+    min-height: 100%;
+}
+
+#collection > #media {
+    min-height: 640px; /* 224px * 3 - 32px*/
+    background: url(images/shelf.png) top left repeat-y}
+
+#collection > #media > table {
+    border-spacing: 0;
+}
+
+#collection tr, td {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+#collection > #media .medium {
+    float: left;
+    position: relative;
+    width: 130px;
+    height: 190px;
+    margin: 22px 50px 12px 50px;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#collection > #media .medium > .coverimage {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 183px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 0;
+    background: url(images/lazyload.jpg) top left no-repeat;
+}
+
+#collection > #media .medium > .title {
+    line-height: 1em;
+    color: #eee;
+    text-shadow: 1px 1px 1px black;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    padding: 5px;
+    bottom: 0px;
+    width: 120px;
+    z-index: 1;
+}
+
+/* @end */
+
+/* @group Details */
+
+#details_outer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0,0,0,.9) top left no-repeat;
+    z-index: 100;
+    display: none;
+}
+
+#details_inner {
+    position: absolute;
+    width: 765px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    margin-left: -382px;
+    color: #ddd;
+    padding: 0 32px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+#details_inner > #details_top {
+    height: 10%;
+    margin-top: 5%;
+}
+
+#details_inner #title {
+    width: 80%;
+    padding: 0 20px;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+    height: 1.5em;
+    line-height: 1.5em;
+}
+
+#details_inner #creator {
+    padding: 0 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #000;
+    color: #656565;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+    width: 90%;
+}
+
+#details_inner #rating {
+    float: right;
+    margin: 0 20px 0 0;
+    font-size: 2em;
+    line-height: 0.8em; /* 1.6em / 2em */
+    letter-spacing: -3px;
+}
+
+#details_inner > #description {
+    overflow-y: auto;
+    border-top: 1px solid #656565;
+    height: 85%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* @end */
+footer {
+    width: 100%;
+    position: relative;
+    float: left;
+}
+
+#footer a.monster {
+    float: left;
+    margin-left: 32px;
+    height: 42px;
+    line-height: 42px;
+}
+
+#footer a.monster img {
+    position: relative;
+    top: 4px;
+}
