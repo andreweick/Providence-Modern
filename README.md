@@ -1,5 +1,9 @@
 ###Providence Modern is an HTML export template for Delicious Library 3.
 
+![A fancy screenshot](http://demo.hpcodecraft.me/demo-providencemodern/screenshot-providencemodern.png)
+
+Here´s a [Live Demo](http://demo.hpcodecraft.me/demo-providencemodern/).
+
 ####Installation
 1. Download the .zip file and unzip it.
 2. Copy the folder providencemodern.libraryhtmltemplate to
